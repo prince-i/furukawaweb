@@ -28,12 +28,6 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Sailor - v4.6.0
-  * Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -163,12 +157,12 @@
             <?php
               $dir = "assets/img/events/";
               $file = scandir($dir);
-              $first_slide = $file[2];
+              $first_slide = $file[2]; # GET THE 1ST IMAGE FILE TO AVOID DUPLICATE
               echo '<div class="carousel-item active">';
               echo '<img src="'.$dir.''.$first_slide.'" class="d-block w-100">';
               echo '</div>';
               foreach($file as $x){
-                if($x == '.' || $x == '..' || $x == $first_slide)continue;
+                if($x == '.' || $x == '..' || $x == $first_slide)continue; #SKIP THE 1ST SLIDE TO AVOID DUPLICATE IMAGE - ITS DYNAMIC IDIOT DONT SAY ANYTHING :)
                 
                 echo '<div class="carousel-item">';
                 echo '<img src="'.$dir.''.$x.'" class="d-block w-100" style="object-fit:contain;">';
@@ -187,7 +181,7 @@
           </button>
         </div>
 
-          </div> -->
+          </div>
         </div>
       
       </div>
